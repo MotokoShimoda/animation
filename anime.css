@@ -12,15 +12,14 @@
 }
 
 .list-item.open .list-content {
-  height: auto; /* 高さを自動調整 */
-  padding: 10px; /* 開いたときの余白を追加 */
+  height: auto;
+  padding: 10px;
 }
 .list-tit {
-  cursor: pointer; /* クリック可能を示すポインタ */
+  cursor: pointer;
   padding: 10px;
   background-color: #f5f5f5;
 }
-/* アコーディオン全体のスタイル */
 .list {
   max-width: 600px;
   margin: 20px auto;
@@ -28,7 +27,6 @@
   list-style: none;
 }
 
-/* 各アイテムのスタイル */
 .list-item {
   border: 1px solid #ccc;
   margin-bottom: 10px;
@@ -37,7 +35,6 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* タイトル部分 */
 .list-tit {
   cursor: pointer;
   padding: 15px;
@@ -53,23 +50,20 @@
   background-color: #d6d6d6;
 }
 
-/* コンテンツ部分 */
 .list-content {
   height: 0;
   overflow: hidden;
-  padding: 0 15px; /* 開閉時の中身の余白 */
+  padding: 0 15px;
   font-size: 16px;
   color: #555;
   transition: height 0.3s ease;
 }
 
-/* 開いている状態のコンテンツ */
 .list-item.open .list-content {
   height: auto;
   padding: 15px;
 }
 
-/* 開閉中に少し目立つ変化 */
 .list-item.open .list-tit {
   background-color: #d0d0d0;
 }
