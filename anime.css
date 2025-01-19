@@ -1,69 +1,35 @@
-.list-item {
-  border: 1px solid #ddd;
-  margin-bottom: 10px;
-  overflow: hidden;
-  transition: height 0.3s ease;
+body {
+  padding-top: 5%;
 }
 
-.list-content {
-  height: 0;
-  overflow: hidden;
-  transition: height 0.3s ease;
-}
-
-.list-item.open .list-content {
-  height: auto;
-  padding: 10px;
-}
-.list-tit {
-  cursor: pointer;
-  padding: 10px;
-  background-color: #f5f5f5;
-}
-.list {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 0;
+ol,
+ul {
   list-style: none;
 }
 
-.list-item {
-  border: 1px solid #ccc;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+/* 以下、アコーディオンの設定 */
+.list {
+  margin: 0 auto;
+  max-width: 700px;
+  width: 100%;
+  padding: 0;
 }
 
-.list-tit {
-  cursor: pointer;
-  padding: 15px;
-  font-size: 18px;
-  background-color: #e0e0e0;
-  color: #333;
+.list .list-item .list-tit {
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  background-color: #d8d8d8;
   margin: 0;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+  border-radius: 5px;
 }
 
-.list-tit:hover {
-  background-color: #d6d6d6;
-}
-
-.list-content {
-  height: 0;
+.list .list-item .list-content {
+  line-height: 1.5;
+  height: 0rem;
   overflow: hidden;
-  padding: 0 15px;
-  font-size: 16px;
-  color: #555;
-  transition: height 0.3s ease;
+  transition: height 0.5s ease 0s, padding 0.5s ease 0s;
+  margin: 0 0 10px 0;
 }
 
-.list-item.open .list-content {
-  height: auto;
-  padding: 15px;
-}
-
-.list-item.open .list-tit {
-  background-color: #d0d0d0;
+.list .list-item .list-content .list-txt {
+  padding: 1rem;
 }

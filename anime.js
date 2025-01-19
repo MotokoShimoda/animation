@@ -1,22 +1,18 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const items = document.querySelectorAll(".list-item");
+  const accordionItems = document.querySelectorAll(".list-item");
 
-  items.forEach((item) => {
+  accordionItems.forEach((item) => {
     const title = item.querySelector(".list-tit");
+
     title.addEventListener("click", () => {
       const content = item.querySelector(".list-content");
-      const isOpen = item.classList.contains("open");
 
-      if (isOpen) {
-        content.style.height = "0";
-        item.classList.remove("open");
+      if (content.style.height === "0px" || !content.style.height) {
+        content.style.height = `${content.scrollHeight}px`;
+        content.style.padding = "1rem";
       } else {
-        items.forEach((i) => {
-          i.classList.remove("open");
-          i.querySelector(".list-content").style.height = "0";
-        });
-        content.style.height = content.scrollHeight + "px";
-        item.classList.add("open");
+        content.style.height = "0";
+        content.style.padding = "0";
       }
     });
   });
